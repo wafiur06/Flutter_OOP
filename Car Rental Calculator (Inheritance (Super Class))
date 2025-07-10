@@ -1,0 +1,31 @@
+void main() {
+  Car car = Car('Toyota', 'Camry', 2020, 4);
+  print('Car Info:');
+  car.displayInfo();
+  print('Rent for 5 days: \$${car.calRentPrice(5)}');
+}
+
+class Vehicle{
+  String brand;
+  String model;
+  int year;
+  Vehicle(this.brand,this.model,this.year);
+  void displayInfo(){
+    print('Brand: $brand');
+    print('Model: $model');
+    print('Year: $year');
+  }
+  double calRentPrice(int day){
+    return day*50.0;
+  }
+}
+class Car extends Vehicle{
+  int door;
+  Car(String brand, String model, int year, this.door) : super(brand, model, year);
+
+  @override
+  double calRentPrice(int day){
+    return super.calRentPrice(day) + 20* door;
+  }
+
+}
