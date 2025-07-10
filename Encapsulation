@@ -1,0 +1,38 @@
+import 'package:args/args.dart';
+import 'person.dart';
+
+void main() {
+  Person person = Person('sagor', 39);
+
+  person.displayInfo();
+  person.setAge= 78;
+  person.setName= 'Wafiur';
+  print(person.name);
+  print(person.age);
+  
+}
+
+
+
+
+class Person{
+  String _name;
+  int _age;
+
+  Person(this._name, this._age);
+
+  set setName(String name){
+    _name = name;
+  }
+  set setAge(int age){
+    if(age>0){
+      _age = age;
+    }
+  }
+
+  String get name => _name;
+  int get age => _age;
+  void displayInfo(){
+    print('Name: $_name, Age: $_age');
+  }
+}
