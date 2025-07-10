@@ -1,0 +1,23 @@
+import 'package:args/args.dart';
+import 'person.dart';
+
+void main() {
+  Student student = Student();
+  student.name = 'Sagor';
+  student.age = 34;
+  student.displayInfo();
+  
+}
+
+
+class Person{
+  String? name;
+  int? age;
+  
+  void displayInfo(){
+    print('Name: $name, Age: $age');
+  }
+}
+class Student extends Person{
+
+}
