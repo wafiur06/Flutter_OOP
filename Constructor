@@ -1,0 +1,19 @@
+void main() {
+  List<Student> name = [
+    Student('atif', 12),
+    Student('sagor', 44),
+    Student('wafi',144),
+  ];
+  name.forEach((element) {
+    print('Name: ${element.name} Age: ${element.age}');
+  });
+}
+
+class Student {
+  String? name;
+  int? age;
+
+  Student(this.name,this.age) {
+    print('Called');
+  }
+}
