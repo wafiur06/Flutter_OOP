@@ -1,0 +1,22 @@
+void main() {
+  Student student = Student('Sagor', 45, '3334');
+  student.displayInfo();
+  
+}
+class Person{
+  String name;
+  int age;
+  Person(this.name,this.age);
+  void displayInfo(){
+    print('Name: $name, Age: $age');
+  }
+}
+class Student extends Person{
+  String id;
+  Student(String name , int age, this.id) : super(name, age);
+  void displayInfo(){
+    super.displayInfo();
+    print('ID: $id');
+  }
+
+}
