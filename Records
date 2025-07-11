@@ -8,7 +8,7 @@ void main() {
 
 (int, int) returnDayMin(DateTime date) {
   DateTime now = DateTime.now();
-  print('Prenest time: $now');
+  print('Present time: $now');
 
   int day = now.difference(date).inDays;
   int min = now.difference(date).inHours;
