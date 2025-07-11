@@ -1,0 +1,16 @@
+void main() {
+  DateTime now = DateTime(2025, 07, 07);
+  print(now);
+  var date = returnDayMin(now);
+  print(date.$1);
+  print(date.$2);
+}
+
+(int , int) returnDayMin(DateTime date){
+  DateTime now = DateTime.now();
+
+  int day = now.difference(date).inDays;
+  int min = now.difference(date).inHours;
+
+  return(day, min);
+}
