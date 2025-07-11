@@ -1,0 +1,30 @@
+void main() {
+ Dog dog = Dog();
+ List<Animal> name = [Dog(), Cat()];
+ dog.sound();
+}
+
+abstract class Animal{
+  //abstract method
+  void sound();
+
+  //non abstract method
+  void eat(){
+    print('Can Eat!');
+  }
+}
+
+class Dog extends Animal{
+  @override
+  void sound(){
+    super.eat();
+    print('break!');
+  }
+}
+
+class Cat extends Animal{
+  @override
+  void sound() {
+    print('Meooo!');
+  }
+}
