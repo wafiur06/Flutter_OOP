@@ -1,0 +1,35 @@
+void main() {
+ Person person = Person('email@gmail.com', 'wafirur');
+ person.display();
+}
+
+class Person with Logger, Validation{
+String email, password;
+Person(this.email, this.password);
+void display(){
+  if(validatepass(password) != null){
+    log(validatepass(password).toString());
+  }
+  else{
+    log('User emaail: ${email} and password is: ${password}');
+  }
+}
+}
+
+mixin Logger{
+  void log(String message){
+    print(message);
+  }
+}
+
+mixin Validation{
+  String? validatepass(String value){
+    if(value.isEmpty){
+      return 'Password cannot be empty';
+    }
+    if(value.length < 6){
+      return'password must be 6 char';
+    }
+    return null;
+  }
+}
