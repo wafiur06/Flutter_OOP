@@ -1,0 +1,29 @@
+void main() {
+  Person person = Person('Wafiur', Gender.female);
+
+  person.display();
+}
+
+enum Gender { male, female, other }
+
+class Person {
+  String name;
+  Gender gender;
+  Person(this.name, this.gender);
+
+  void display() {
+    switch (gender) {
+      case Gender.male:
+        print('Gender: Male');
+        break;
+      case Gender.female:
+        print('Gender: Female');
+        break;
+      case Gender.other:
+        print('Gender: Other');
+        break;
+      default:
+        print('Gender: Unknown');
+    }
+  }
+}
