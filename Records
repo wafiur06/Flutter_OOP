@@ -1,16 +1,17 @@
 void main() {
   DateTime now = DateTime(2025, 07, 07);
-  print(now);
+  print('Initial time: $now');
   var date = returnDayMin(now);
-  print(date.$1);
-  print(date.$2);
+  print('diffenence in days: ${date.$1}');
+  print('diffenence in hours: ${date.$2}');
 }
 
-(int , int) returnDayMin(DateTime date){
+(int, int) returnDayMin(DateTime date) {
   DateTime now = DateTime.now();
+  print('Prenest time: $now');
 
   int day = now.difference(date).inDays;
   int min = now.difference(date).inHours;
 
-  return(day, min);
+  return (day, min);
 }
